@@ -1,15 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import testFile from './modules/testFile'
 
-Vue.use(Vuex)
+if (process.env.NODE_ENV === "development") {
+	Vue.use(Vuex)
+}
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+	modules: {
+		testFile
+	}
 })
